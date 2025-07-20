@@ -1,6 +1,7 @@
 # microcontrollers-101
 
 Project Overview
+
 This project uses the AVR64DD32 microcontroller to control two LEDs (RIGHT_EYE and LEFT_EYE) that blink simultaneously every second, creating a simple owl eyes effect. The project was generated using MPLAB Code Configurator (MCC) with the Melody framework.
 Hardware Requirements
 
@@ -11,12 +12,14 @@ Power Supply: 3.3V or 5V (depending on your setup)
 Breadboard/PCB: For connections
 
 Pin Configuration
+
 The project uses two GPIO pins configured as outputs:
 
 RIGHT_EYE - Controls the right eye LED
 LEFT_EYE - Controls the left eye LED
 
 Note: Specific pin assignments are defined in the MCC-generated configuration files.
+
 Software Requirements
 
 MPLAB X IDE (for development)
@@ -24,6 +27,7 @@ XC8 Compiler v3.00 or later
 MPLAB Code Configurator (MCC) v5.5.1 or later
 
 Project Structure
+
 owl-eyes-avr64dd32/
 ├── main.c                           # Main application code
 ├── compile_flags.txt                # Compiler flags for development
@@ -31,6 +35,7 @@ owl-eyes-avr64dd32/
 ├── mcc-manifest-autosave.yml        # MCC autosave manifest
 ├── mcc_generated_files/             # MCC generated system files
 └── README.md                        # This file
+
 How It Works
 The main application runs in a simple infinite loop:
 
@@ -41,12 +46,15 @@ Wait 1000ms (1 second)
 Repeat the cycle
 
 The system operates at 4MHz (F_CPU = 4000000UL) and uses the _delay_ms() function for timing.
+
 Circuit Diagram
+
 AVR64DD32
     |
     ├── RIGHT_EYE_PIN ──[220Ω]──── LED1 ──── GND
     |
     └── LEFT_EYE_PIN  ──[220Ω]──── LED2 ──── GND
+    
 Building and Flashing
 
 Open the project in MPLAB X IDE
@@ -82,6 +90,7 @@ License
 This project is based on Microchip's generated code templates and follows their licensing terms. Please refer to the license header in the source files for specific terms.
 Contributing
 Feel free to fork this project and submit pull requests for improvements or additional features!
+
 Troubleshooting
 
 LEDs not blinking: Check pin connections and current-limiting resistors
